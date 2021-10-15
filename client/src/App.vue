@@ -1,8 +1,24 @@
 <template>
   <div id="app">
-    <router-view />
+    <AppLayout>
+      <AppButton><img src="/images/home.svg" /> Home</AppButton>
+    </AppLayout>
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import AppButton from '@/components/AppButton.vue';
+import AppLayout from '@/components/AppLayout.vue';
+
+export default {
+  name: 'Home',
+  components: {
+    AppButton,
+    AppLayout,
+  },
+};
+</script>
 
 <style>
 #app {
