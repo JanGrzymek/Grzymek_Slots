@@ -1,7 +1,12 @@
 <template>
   <div id="app">
     <AppLayout>
-      <AppButton><img src="/images/home.svg" /> Home</AppButton>
+      <template v-slot:default>
+        <AppButton><img src="/images/home.svg" /> Home</AppButton>
+      </template>
+      <template v-slot:header> I was made with Vue slots! </template>
+      <!-- Slot reihenfolge spielt keine Rolle. -->
+      <template v-slot:footer>By Robert Baumgartner</template>
     </AppLayout>
   </div>
 </template>
