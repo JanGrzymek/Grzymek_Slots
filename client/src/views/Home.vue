@@ -1,21 +1,28 @@
 <template>
   <div>
-    <AppLayout>
-      <template v-slot:header> I was made with Vue slots! </template>
-      <AppButton><img src="../../public/images/home.svg" /> Home</AppButton>
-      <template v-slot:footer> By Robert Baumgartner </template>
-    </AppLayout>
+    <div style="display: flex">
+      <Sheet style="margin-left: 20px">
+        <h3>Memo to myself</h3>
+        <p>Always prepare for PLFs in time!</p>
+        <img src="../../public/images/info.svg" width="80px" />
+      </Sheet>
+      <Sheet style="margin-left: 20px">
+        <p>INSY, SEW and Webtechnologies are our favorite subjects!</p>
+        <span style="font-style: italic">Starkschwitz Fiedler, Jan Schreck</span>
+        <p>Wish i was there!</p>
+        <span style="font-style: italic">E. Wahn</span>
+      </Sheet>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import AppLayout from "@/components/AppLayout.vue";
-
+import Sheet from '@/components/Sheet.vue';
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    AppLayout,
+    Sheet,
   },
 };
 </script>
